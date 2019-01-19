@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Drinks.API.Models;
 using Microsoft.EntityFrameworkCore;
+using Drinks.API.Data.Contracts;
 
 namespace Drinks.API.Data
 {

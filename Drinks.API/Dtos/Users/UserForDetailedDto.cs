@@ -1,17 +1,15 @@
 using System;
 using System.Collections.Generic;
+using Drinks.API.Dtos.Recipes;
+using Drinks.API.Models;
 
-namespace Drinks.API.Models
+namespace Drinks.API.Dtos.Users
 {
-    public class User
+    public class UserForDetailedDto
     {
         public int Id {get;set;}
 
         public string Email { get; set; }
-
-        public byte[] PasswordHash { get; set; }
-
-        public byte[] PasswordSalt { get; set; }
 
         public string Username { get; set; }
 
@@ -23,6 +21,6 @@ namespace Drinks.API.Models
 
         public string Favourites { get; set; }
 
-        public ICollection<Recipe> Recipes { get; set; }
+        public ICollection<RecipeForDetailedDto> Recipes { get; set; }
     }
 }

@@ -5,13 +5,13 @@
     <div *ngIf="!loggedIn()" class="navbar-nav mr-auto"></div>
     <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
       <li class="nav-item" routerLinkActive="router-link-active">
-        <a class="nav-link" [routerLink]="['/drinks']"  >All Drinks</a>
+        <a class="nav-link" [routerLink]="['/recipes']" >All Drinks</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Create a Drink</a>
       </li>
       <li class="nav-item" routerLinkActive="router-link-active">
-          <a class="nav-link" [routerLink]="['/lists']">Lists</a>
+          <a class="nav-link" [routerLink]="['/recipes']">Lists</a>
         </li>
         <li class="nav-item" routerLinkActive="router-link-active">
             <a class="nav-link" [routerLink]="['/messages']">Messages</a>

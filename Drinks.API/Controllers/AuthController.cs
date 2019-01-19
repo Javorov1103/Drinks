@@ -3,7 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using Drinks.API.Data;
+using Drinks.API.Data.Contracts;
 using Drinks.API.Dtos;
 using Drinks.API.Models;
 using Microsoft.AspNetCore.Mvc;

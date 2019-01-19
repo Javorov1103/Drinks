@@ -1,9 +1,11 @@
 import {Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { DrinkListComponent } from './drink-list/drink-list.component';
 import { MessagesComponent } from './messages/messages.component';
-import { ListsComponent } from './lists/lists.component';
 import { AuthGuard } from './_guards/auth.guard';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeDetailResolver } from './_resolvers/recipe-detail.resolver';
+import { RecipeListResolver } from './_resolvers/recipe-list.resolver';
 
 export const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -12,9 +14,9 @@ export const appRoutes: Routes = [
         runGuardsAndResolvers: 'always',
         canActivate: [AuthGuard],
         children: [
-            {path: 'drinks', component: DrinkListComponent},
+            {path: 'recipes', component: RecipeListComponent, resolve: {recipes: RecipeListResolver}},
+            {path: 'recipes/:id', component: RecipeDetailComponent, resolve: {recipe: RecipeDetailResolver}},
             {path: 'messages', component: MessagesComponent},
-            {path: 'lists', component: ListsComponent},
         ]
     },
     {path: '**', redirectTo: '', pathMatch: 'full'}

@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Drinks.API.Models;
 
-namespace Drinks.API.Data
+namespace Drinks.API.Data.Contracts
 {
     public interface IAuthRepository
     {

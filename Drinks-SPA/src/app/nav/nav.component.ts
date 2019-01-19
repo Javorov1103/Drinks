@@ -22,7 +22,7 @@ model: any = {};
     }, error => {
       this.ngxNotificationService.sendMessage('Failed to login', 'warning', 'top-right');
     }, () => {
-      this.router.navigate(['/drinks']);
+      this.router.navigate(['/recipes']);
     });
   }
 
