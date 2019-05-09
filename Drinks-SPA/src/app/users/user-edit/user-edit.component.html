@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <div>
+              <strong>{{user.username}}</strong>
+              <p>{{user.favourites}}</p>
+            </div>
+          </div>
+          <div class="card-footer">
+              <div class="btn-group d-flex">
+                Rating will go here
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="tab-panel">
+          <tabset class="recipe-tabset">
+            <tab heading = "About {{user.username}}">
+                <h4>Introduction</h4>
+                <p>{{user.introduction}}</p>
+            </tab>
+            <tab heading="Favourites">
+                <h4>Favourites</h4>
+                <p>{{user.favourites}}</p>
+            </tab>
+            <tab heading="Recipes">
+              <div *ngFor="let recipe of user.recipes" class="container d-flex">
+                  <div class="col-lg-4 row">
+                    <h4 [routerLink]="['/recipes', recipe.id]" routerLinkActive="router-link-active">{{recipe.name}}</h4>
+                    <img class="card-img-top img-thumbnail" src="{{recipe.photoUrl}}" alt="{{recipe.name}}">
+                    <p>{{recipe.description}}</p>
+                    <p>{{recipe.ingredients}}</p>
+                    <a class="btn btn-primary" [routerLink]="['/recipes/edit' , recipe.id]" routerLinkActive="router-link-active" >Edit Recipe</a>
+                  </div>
+              </div>
+              
+              </tab>
+          </tabset>
+        </div>
+    </div>
+  </div>
+</div>

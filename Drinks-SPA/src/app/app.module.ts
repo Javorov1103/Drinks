@@ -25,6 +25,9 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeDetailResolver } from './_resolvers/recipe-detail.resolver';
 import { RecipeListResolver } from './_resolvers/recipe-list.resolver';
 import { NgxGalleryModule } from 'ngx-gallery';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { UserEditComponent } from './users/user-edit/user-edit.component';
+import { UserDetailResolver } from './_resolvers/user-detail.resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -41,7 +44,9 @@ export function tokenGetter() {
       MessagesComponent,
       RecipeCardComponent,
       RecipeListComponent,
-      RecipeDetailComponent
+      RecipeDetailComponent,
+      RecipeEditComponent,
+      UserEditComponent
    ],
    imports: [
       BrowserModule,
@@ -66,7 +71,8 @@ export function tokenGetter() {
       UserService,
       RecipeService,
       RecipeDetailResolver,
-      RecipeListResolver
+      RecipeListResolver,
+      UserDetailResolver
    ],
    bootstrap: [
       AppComponent

@@ -5,8 +5,8 @@
           <img class="card-img-top img-thumbnail" src="{{recipe?.photoUrl}}" alt="{{recipe?.name}}">
           <div class="card-body">
             <div>
-              <strong>{{recipe.name}}</strong>
-              <p>{{recipe.description}}</p>
+              <strong>{{recipe?.name}}</strong>
+              <p>{{recipe?.description}}</p>
             </div>
           </div>
           <div class="card-footer">
@@ -22,11 +22,11 @@
           <tabset class="recipe-tabset">
             <tab heading = "About {{recipe?.name}}">
                 <h4>Description</h4>
-                <p>{{recipe.description}}</p>
+                <p>{{recipe?.description}}</p>
             </tab>
             <tab heading="Ingredients">
                 <h4>Ingredients</h4>
-                <p>{{recipe.ingredients}}</p>
+                <p>{{recipe?.ingredients}}</p>
             </tab>
             <tab heading="Photos">
               <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>

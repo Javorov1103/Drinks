@@ -50,13 +50,4 @@ export class RecipeDetailComponent implements OnInit {
 
     return imagesUrl;
   }
-
-  // loadRecipe() {
-  //   this.recipeService.getRecipe(+this.route.snapshot.params['id']).subscribe((recipe: Recipe) => {
-  //   this.recipe = recipe;
-  // }, error => {
-  //   this.notif.sendMessage(error, 'warning', 'bottom-right');
-  // });
-  //
-
 }

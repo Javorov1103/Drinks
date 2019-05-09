@@ -22,13 +22,5 @@ export class RecipeListComponent implements OnInit {
     });
   }
 
-  // loadDrinks() {
-  //   this.recipesService.getRecipes().subscribe((recipes: Recipe[]) => {
-  //     this.recipes = recipes;
-  //   }, error => {
-  //     this.ngxNotificationService.sendMessage(error, 'warning', 'bottom-right');
-  //   });
-  // }
-
 
 }

@@ -28,7 +28,7 @@ namespace Drinks.API.Data
         public async Task<User> GetUser(int id)
         {
             var user = await context.Users
-            .Include(r=>r.Recipes).FirstOrDefaultAsync(u =>u.Id==id);
+            .Include(r=>r.Recipes).ThenInclude(r =>r.Photos).FirstOrDefaultAsync(u =>u.Id==id);
 
             return user;
         }
@@ -50,7 +50,7 @@ namespace Drinks.API.Data
 
         public async Task<Recipe> GetRecipe(int id)
         {
-            return await this.context.Recipes.Include(r=>r.Photos).FirstOrDefaultAsync(r => r.Id == id);
+            return await this.context.Recipes.Include(r=>r.Photos).FirstOrDefaultAsync(r => r.Id == id); 
         }
     }
 }
